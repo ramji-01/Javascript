@@ -1,0 +1,7 @@
+let finalResult= 1;
+for(let userDigit = 4; userDigit >= 2; userDigit--)
+{
+    finalResult += userDigit;
+    //console.log(finalValue);
+}
+console.log(finalResult);
