@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoScreen</title>
+</head>
+<body>
+    <h2>Vanakam da Mapla! Theni la irunthu! unaku ena venumo thayangamaa keela add panu!</h2>
+    <input id="inputValue"></input>
+    <button id="Add">Add</button>
+    <h2>Added list</h2>
+    <ul id="list"></ul>
+    <h2>Completed list</h2>
+    <ul id="doneList"></ul>
+</body>
+<script>
+    let btn = document.getElementById("Add");
+    let txtbox = document.getElementById("inputValue");
+    let last = document.getElementById("doneList");
+    let taskList = new Array();
+    btn.addEventListener("click",()=>{
+        taskList.push(txtbox.value);
+        addInBucket();
+        txtbox.value = "";
+    })
+    let inBucket = document.getElementById("list");
+    function addInBucket(){
+        inBucket.innerHTML += "<li id=" + (taskList.length-1) +  "><button onclick='complete(" + (taskList.length-1) + ")'>" + txtbox.value + "</button></li>";
+        //console.log(document); 
+    }
+    function complete(id){
+        console.log(id);
+        last.innerHTML += "<li><button>" + taskList[id] + "</button></li>";
+        document.getElementById(id).style.display = "none";
+        
+    }
+
+</script>
+</html>

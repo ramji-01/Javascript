@@ -1,9 +1,26 @@
-<html>
-    <head>
-    </head>
-    <body>
-        Hello World!!!
-    </body>
-    <script src="/script.js">
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice DOM in Javascript</title>
+</head>
+<body>
+    <h1 id="check">"Hello World"</h1>
+</body>
+<script> //DOM
+    let element = document.getElementById("check");
+    element.textContent += " from Earth";
+    element.style.color = "yellow";
+    element.style.backgroundColor = "Red";
+    element.style.textAlign = "center";
+    element.className = "header";
+    console.log(element);
+    
+    let image = document.createElement("img");
+    image.src = "https://upload.wikimedia.org/wikipedia/ta/b/b2/%E0%AE%9C%E0%AE%A9_%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AE%A9%E0%AF%8D_%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%88%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%AE%E0%AF%8D.jpg";
+    element.insertAdjacentElement("afterend", image);
+    image.style.display = "block";
+    image.style.margin = "0 auto";
+</script>
 </html>

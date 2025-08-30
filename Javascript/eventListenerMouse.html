@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <img id="PR" src="https://media-cache.cinematerial.com/p/500x/bpmotgsp/lik-love-insurance-kompany-indian-movie-poster.jpg?v=1739882781" width="300"></img>
+</body>
+<script>
+    let element = document.getElementById("PR");
+    element.addEventListener("click",()=>{
+        element.src = "https://pbs.twimg.com/media/Gws0jyfbsAABsUI.jpg:large";
+    });
+    element.addEventListener("mousedown",()=>{
+        element.src = "https://upload.wikimedia.org/wikipedia/en/7/75/Leo_%282023_Indian_film%29.jpg";
+    });
+    element.addEventListener("mouseout",()=>{
+        element.src = "https://media-cache.cinematerial.com/p/500x/bpmotgsp/lik-love-insurance-kompany-indian-movie-poster.jpg?v=1739882781";
+    });
+</script>
+</html>

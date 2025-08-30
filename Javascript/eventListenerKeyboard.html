@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h1 id="check">1</h1>
+</body>
+<script>
+    let element = document.getElementById("check");
+    document.addEventListener("keydown",(Event)=>{
+        console.log(Event.key);
+        if(Event.key == "ArrowUp")
+            element.innerText = Number(element.innerText) + 1;
+        else
+        element.innerText = Number(element.innerText) - 1;
+    })
+</script>
+</html>
